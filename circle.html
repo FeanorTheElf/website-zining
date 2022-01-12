@@ -87,64 +87,64 @@
                 border-radius: 50%;
                 -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
                 mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
-                width: 10vh;
-                height: 10vh;
+                width: 8vh;
+                height: 8vh;
                 background-color: black;
             }
             #video-circle {
                 position: absolute;
-                left: 5vh;
-                top: 5vh;
-                width: calc(100% - 10vh);
-                height: calc(100% - 10vh);
+                left: 4vh;
+                top: 4vh;
+                width: calc(100% - 8vh);
+                height: calc(100% - 8vh);
             }
             #video0 {
-                left: calc((100% - 10vh) * (1 + 1) / 2);
-                top: calc((100% - 10vh) * (0 + 1) / 2);
+                left: calc((100% - 8vh) * (1 + 1) / 2);
+                top: calc((100% - 8vh) * (0 + 1) / 2);
             }
             #video1 {
-                left: calc((100% - 10vh) * (0.8660254037844387 + 1) / 2);
-                top: calc((100% - 10vh) * (0.5 + 1) / 2);
+                left: calc((100% - 8vh) * (0.8660254037844387 + 1) / 2);
+                top: calc((100% - 8vh) * (0.5 + 1) / 2);
             }
             #video2 {
-                left: calc((100% - 10vh) * (0.5 + 1) / 2);
-                top: calc((100% - 10vh) * (0.8660254037844387 + 1) / 2);
+                left: calc((100% - 8vh) * (0.5 + 1) / 2);
+                top: calc((100% - 8vh) * (0.8660254037844387 + 1) / 2);
             }
             #video3 {
-                left: calc((100% - 10vh) * (0 + 1) / 2);
-                top: calc((100% - 10vh) * (1 + 1) / 2);
+                left: calc((100% - 8vh) * (0 + 1) / 2);
+                top: calc((100% - 8vh) * (1 + 1) / 2);
             }
             #video4 {
-                left: calc((100% - 10vh) * (-0.5 + 1) / 2);
-                top: calc((100% - 10vh) * (0.8660254037844387 + 1) / 2);
+                left: calc((100% - 8vh) * (-0.5 + 1) / 2);
+                top: calc((100% - 8vh) * (0.8660254037844387 + 1) / 2);
             }
             #video5 {
-                left: calc((100% - 10vh) * (-0.8660254037844387 + 1) / 2);
-                top: calc((100% - 10vh) * (0.5 + 1) / 2);
+                left: calc((100% - 8vh) * (-0.8660254037844387 + 1) / 2);
+                top: calc((100% - 8vh) * (0.5 + 1) / 2);
             }
             #video6 {
-                left: calc((100% - 10vh) * (-1 + 1) / 2);
-                top: calc((100% - 10vh) * (0 + 1) / 2);
+                left: calc((100% - 8vh) * (-1 + 1) / 2);
+                top: calc((100% - 8vh) * (0 + 1) / 2);
             }
             #video7 {
-                left: calc((100% - 10vh) * (-0.8660254037844387 + 1) / 2);
-                top: calc((100% - 10vh) * (-0.5 + 1) / 2);
+                left: calc((100% - 8vh) * (-0.8660254037844387 + 1) / 2);
+                top: calc((100% - 8vh) * (-0.5 + 1) / 2);
             }
             #video8 {
-                left: calc((100% - 10vh) * (-0.5 + 1) / 2);
-                top: calc((100% - 10vh) * (-0.8660254037844387 + 1) / 2);
+                left: calc((100% - 8vh) * (-0.5 + 1) / 2);
+                top: calc((100% - 8vh) * (-0.8660254037844387 + 1) / 2);
             }
             #video9 {
-                left: calc((100% - 10vh) * (0 + 1) / 2);
-                top: calc((100% - 10vh) * (-1 + 1) / 2);
+                left: calc((100% - 8vh) * (0 + 1) / 2);
+                top: calc((100% - 8vh) * (-1 + 1) / 2);
             }
             #video10 {
-                left: calc((100% - 10vh) * (0.5 + 1) / 2);
-                top: calc((100% - 10vh) * (-0.8660254037844387 + 1) / 2);
+                left: calc((100% - 8vh) * (0.5 + 1) / 2);
+                top: calc((100% - 8vh) * (-0.8660254037844387 + 1) / 2);
             }
             #video11 {
-                left: calc((100% - 10vh) * (0.8660254037844387 + 1) / 2);
-                top: calc((100% - 10vh) * (-0.5 + 1) / 2);
+                left: calc((100% - 8vh) * (0.8660254037844387 + 1) / 2);
+                top: calc((100% - 8vh) * (-0.5 + 1) / 2);
             }
         </style>
     </head>
@@ -169,7 +169,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link link-dark menu-font" href="./circle.html">
-                                    Third
+                                    A Circle of One's Own
                                 </a>
                             </li>
                         </ul>
@@ -181,7 +181,7 @@
                 <div id="main" class="col">
                     <div id="video-container" class="nopadding">
                         <svg id="video-circle">
-                            <ellipse cx="50%" cy="50%" rx="49%" ry="49%" stroke-width="2" stroke="black" style="fill: none;"/>
+                            <ellipse cx="50%" cy="50%" rx="49%" ry="49%" stroke-width="4" stroke="black" style="fill: none;"/>
                         </svg>
                         <div id="video0" class="circular-display">
                             <video class="nopadding circular-video" loop muted>
@@ -259,18 +259,20 @@
                     video_element.addEventListener("loadedmetadata", function (_e) {
                         centerVideo(video_element);
                     }, false);
-                    video_element.src = "./video.mp4";
+                    video_element.src = "./circle/" + video_element.parentElement.id + ".mp4";
                     video_element.parentElement.onclick = function(_e) {
+                        if (last_shown_video != null) {
+                            last_shown_video.pause();
+                            last_shown_video.parentElement.classList.remove("animate-video-grow");
+                            last_shown_video.parentElement.classList.add("animate-video-shrink");
+                        }
                         if (last_shown_video != video_element) {
-                            if (last_shown_video != null) {
-                                last_shown_video.pause();
-                                last_shown_video.parentElement.classList.remove("animate-video-grow");
-                                last_shown_video.parentElement.classList.add("animate-video-shrink");
-                            }
                             video_element.parentElement.classList.remove("animate-video-shrink");
                             video_element.parentElement.classList.add("animate-video-grow");
                             video_element.play();
                             last_shown_video = video_element;
+                        } else {
+                            last_shown_video = null;
                         }
                     }
                 }
