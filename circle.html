@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="UTF-8"> 
         <title>Zining Ren</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,11 +36,13 @@
                 font-weight: bold;
             }
 
-
+            #main {
+                height: calc(100vh - 20px);
+                margin: 10px
+            }
             #video-container {
                 position: relative;
-                background-color: red;
-                height: 100vh;
+                height: 100%;
             }
             .circular-video {
                 position: relative;
@@ -47,39 +50,107 @@
             }
             @keyframes video_grow {
                 from {
-                    width: 20vmin;
-                    height: 20vmin;
                 }
                 to {
-                    width: 50vmin;
-                    height: 50vmin;
+                    width: 70vh;
+                    height: 70vh;
+                    left: calc((100% - 70vh) / 2);
+                    top: calc((100% - 70vh) / 2);
                 }
             }
             @keyframes video_shrink {
                 from {
-                    width: 50vmin;
-                    height: 50vmin;
+                    width: 70vh;
+                    height: 70vh;
+                    left: calc((100% - 70vh) / 2);
+                    top: calc((100% - 70vh) / 2);
                 }
                 to {
-                    width: 20vmin;
-                    height: 20vmin;
                 }
+            }
+            .animate-video-grow {
+                animation-duration: 2s;
+                animation-name: video_grow;
+                z-index: 200;
+                -webkit-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                -ms-animation-fill-mode: forwards;
+                -o-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+            .animate-video-shrink {
+                animation-duration: 2s;
+                animation-name: video_shrink;
             }
             .circular-display {
                 position: absolute;
                 border-radius: 50%;
                 -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
                 mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
-                width: 50vmin;
-                height: 50vmin;
-                animation-duration: 2s;
-                animation-name: video_grow;
+                width: 10vh;
+                height: 10vh;
+                background-color: black;
+            }
+            #video-circle {
+                position: absolute;
+                left: 5vh;
+                top: 5vh;
+                width: calc(100% - 10vh);
+                height: calc(100% - 10vh);
+            }
+            #video0 {
+                left: calc((100% - 10vh) * (1 + 1) / 2);
+                top: calc((100% - 10vh) * (0 + 1) / 2);
+            }
+            #video1 {
+                left: calc((100% - 10vh) * (0.8660254037844387 + 1) / 2);
+                top: calc((100% - 10vh) * (0.5 + 1) / 2);
+            }
+            #video2 {
+                left: calc((100% - 10vh) * (0.5 + 1) / 2);
+                top: calc((100% - 10vh) * (0.8660254037844387 + 1) / 2);
+            }
+            #video3 {
+                left: calc((100% - 10vh) * (0 + 1) / 2);
+                top: calc((100% - 10vh) * (1 + 1) / 2);
+            }
+            #video4 {
+                left: calc((100% - 10vh) * (-0.5 + 1) / 2);
+                top: calc((100% - 10vh) * (0.8660254037844387 + 1) / 2);
+            }
+            #video5 {
+                left: calc((100% - 10vh) * (-0.8660254037844387 + 1) / 2);
+                top: calc((100% - 10vh) * (0.5 + 1) / 2);
+            }
+            #video6 {
+                left: calc((100% - 10vh) * (-1 + 1) / 2);
+                top: calc((100% - 10vh) * (0 + 1) / 2);
+            }
+            #video7 {
+                left: calc((100% - 10vh) * (-0.8660254037844387 + 1) / 2);
+                top: calc((100% - 10vh) * (-0.5 + 1) / 2);
+            }
+            #video8 {
+                left: calc((100% - 10vh) * (-0.5 + 1) / 2);
+                top: calc((100% - 10vh) * (-0.8660254037844387 + 1) / 2);
+            }
+            #video9 {
+                left: calc((100% - 10vh) * (0 + 1) / 2);
+                top: calc((100% - 10vh) * (-1 + 1) / 2);
+            }
+            #video10 {
+                left: calc((100% - 10vh) * (0.5 + 1) / 2);
+                top: calc((100% - 10vh) * (-0.8660254037844387 + 1) / 2);
+            }
+            #video11 {
+                left: calc((100% - 10vh) * (0.8660254037844387 + 1) / 2);
+                top: calc((100% - 10vh) * (-0.5 + 1) / 2);
             }
         </style>
     </head>
     <body class="text-font">
-        <div class="container-fluid overflow-hidden">
-            <div class="row vh-sm-100 overflow-auto">
+        <div class="container-fluid" style="overflow-x: hidden;">
+            <div class="row vh-sm-100">
                 <div class="col-12 col-sm-3 col-xl-2 text-white d-flex position-fixed vh-sm-100 foreground">
                     <div class="d-flex flex-sm-column flex-row flex-grow-1 px-3 pt-3">
                         <h2 class="pb-sm-3 pb-2 pr-3 text-decoration-none text-dark menu-font">
@@ -96,22 +167,79 @@
                                     Biography
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-dark menu-font" href="./circle.html">
+                                    Third
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-12 col-sm-3 col-xl-2 vh-sm-100 display-sm">
-                    <div class="d-flex flex-sm-column flex-row flex-grow-1 px-3 pt-3 display-sm">
-                    </div>
+                    <!-- To prevent the content from going under the sidebar, as position: fixed above does not prevent overlap -->
                 </div>
-                <div id="main" class="vh-sm-100 col mt-4 ms-4 nopadding">
+                <div id="main" class="col">
                     <div id="video-container" class="nopadding">
-                        <div id="video0" class="circular-display" style="top: 0;">
-                            <video class="nopadding circular-video" loop autoplay="autoplay" muted>
+                        <svg id="video-circle">
+                            <ellipse cx="50%" cy="50%" rx="49%" ry="49%" stroke-width="2" stroke="black" style="fill: none;"/>
+                        </svg>
+                        <div id="video0" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div id="video1" class="circular-display" style="bottom: 0;">
-                            <video class="nopadding circular-video" loop autoplay="autoplay" muted>
+                        <div id="video1" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="video2" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="video3" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="video4" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="video5" class="circular-display animate-video">
+                            <video class="nopadding circular-video" loop muted>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="video6" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="video7" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="video8" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="video9" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="video10" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="video11" class="circular-display">
+                            <video class="nopadding circular-video" loop muted>
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -120,20 +248,34 @@
             </div>
         </div>
         <script defer>
-            function adjustImages() {
-                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-                const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-                const vmin = Math.min(vw, vh);
+            function centerVideo(video_element) {
+                const width = video_element.videoWidth;
+                const height = video_element.videoHeight;
+                video_element.style.left = -Math.floor((width - height) * 50 / height) + "%";
+            }
+            function setupVideos() {
+                let last_shown_video = null;
                 for (let video_element of document.getElementsByClassName("circular-video")) {
-                    video_element.addEventListener( "loadedmetadata", function (e) {
-                        const width = this.videoWidth;
-                        const height = this.videoHeight;
-                        video_element.style.left = -Math.floor((width - height) * 50 / height) + "%";
-                    }, false );
+                    video_element.addEventListener("loadedmetadata", function (_e) {
+                        centerVideo(video_element);
+                    }, false);
                     video_element.src = "./video.mp4";
+                    video_element.parentElement.onclick = function(_e) {
+                        if (last_shown_video != video_element) {
+                            if (last_shown_video != null) {
+                                last_shown_video.pause();
+                                last_shown_video.parentElement.classList.remove("animate-video-grow");
+                                last_shown_video.parentElement.classList.add("animate-video-shrink");
+                            }
+                            video_element.parentElement.classList.remove("animate-video-shrink");
+                            video_element.parentElement.classList.add("animate-video-grow");
+                            video_element.play();
+                            last_shown_video = video_element;
+                        }
+                    }
                 }
             }
-            adjustImages();
+            setupVideos();
         </script>
     </body>
 </html>
