@@ -12,6 +12,11 @@
                     height: 100vh !important;
                 }
             }
+            @media (max-width: 576.02px) { 
+                .display-sm {
+                    display: none;
+                }
+            }
             .nopadding {
                 padding: 0 !important;
                 margin: 0 !important;
@@ -32,9 +37,9 @@
             }
         </style>
     </head>
-    <body class="text-font">
+    <body id="content" class="text-font">
         <div class="container-fluid overflow-hidden">
-            <div class="row vh-sm-100 overflow-auto">
+            <div id="video_container" class="row vh-sm-100 overflow-auto">
                 <div class="col-12 col-sm-3 col-xl-2 text-white d-flex position-fixed vh-sm-100 foreground">
                     <div class="d-flex flex-sm-column flex-row flex-grow-1 px-3 pt-3">
                         <h2 class="pb-sm-3 pb-2 pr-3 text-decoration-none text-light menu-font">
@@ -55,10 +60,10 @@
                     </div>
                 </div>
                 <!--video width="100%" class="nopadding" loop muted-->
-                <video width="100%" class="nopadding" loop autoplay="autoplay" muted>
+                <video id="video_display" width="100%" class="nopadding" loop autoplay="autoplay" muted>
                     <source src="./video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video> 
+                </video>
             </div>
         </div>
     </body>
