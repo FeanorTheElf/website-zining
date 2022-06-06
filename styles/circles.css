@@ -1,0 +1,72 @@
+#main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#video-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.circular-video {
+    position: relative;
+    height: 100%;
+}
+
+@keyframes video_grow {
+    from {
+    }
+    to {
+        width: 70vh;
+        height: 70vh;
+        left: calc((100% - 70vh) / 2);
+        top: calc((100% - 70vh) / 2);
+    }
+}
+
+@keyframes video_shrink {
+    from {
+        width: 70vh;
+        height: 70vh;
+        left: calc((100% - 70vh) / 2);
+        top: calc((100% - 70vh) / 2);
+    }
+    to {
+    }
+}
+
+.animate-video-grow {
+    animation-duration: 2s;
+    animation-name: video_grow;
+    z-index: 200;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.animate-video-shrink {
+    animation-duration: 2s;
+    animation-name: video_shrink;
+}
+
+.circular-display {
+    position: absolute;
+    border-radius: 50%;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    width: 8vh;
+    height: 8vh;
+    background-color: black;
+}
+
+#video-circle {
+    position: absolute;
+    left: 4vh;
+    top: 4vh;
+    width: calc(100% - 8vh);
+    height: calc(100% - 8vh);
+}

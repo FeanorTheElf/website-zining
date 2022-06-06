@@ -1,0 +1,77 @@
+@import "./circles.css";
+
+@media (min-width: 576.02px) { 
+    .vh-sm-100 {
+        height: 100vh !important;
+    }
+}
+
+@media (max-width: 576.02px) { 
+    .display-sm {
+        display: none;
+    }
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.menu-font {
+    font-family: 'Tiro Gurmukhi', serif;
+}
+
+.text-font {
+    font-family: 'Tiro Gurmukhi', serif;
+}
+
+.zining-font {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.foreground {
+    z-index: 100;
+}
+
+.foreforeground {
+    z-index: 200;
+}
+
+.video-centered {
+    width: 50% !important;
+    margin-left: 25% !important;
+}
+
+.video-fullscreen {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+}
+
+.carousel-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.spacer-div {
+    width: 100%;
+    height: 30vh;
+}
+
+.pdf-reader {
+    width: 100%;
+    height: 90vh;
+    border: solid;
+    border-color: black;
+}
+
+#a-novel {
+    padding: 20vh;
+}
