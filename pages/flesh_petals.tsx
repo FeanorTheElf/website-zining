@@ -14,7 +14,7 @@ const FleshPetals: NextPage = () => {
             <img key={1} src="./flesh_petals/img5.png"/>
         ]}/>
         <MiddleColumn>
-            <span>
+            <div className="text-block">
                 Flesh, petals and Her Garden<br/>
                 2020<br/>
                 Installation with performance video 9&apos;25&quot;<br/>
@@ -23,14 +23,14 @@ const FleshPetals: NextPage = () => {
                 This work is about a female character &quot;Lan&quot; in my fictional writing, which explored female body conscious, physiology, emotion and trauma.<br/>
                 <br/>
                 The basement is an alienated world that suggests Lan&apos;s inner body. Deformed organs, eggs, fallopian tubes, vagina, umbilical cord, bones, dissolved flesh, and blood are scattered on the red floor.
-            </span>
+            </div>
+            <Spacer/>
+            <video id="video_display" className="video-full" loop controls>
+                <source src="./flesh_petals/video.mp4" type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
+            <Spacer/>
         </MiddleColumn>
-        <Spacer/>
-        <video id="video_display" className="video-centered" loop controls>
-            <source src="./flesh_petals/video.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-        </video>
-        <Spacer/>
     </PageFull>;
 }
 

@@ -7,12 +7,12 @@ export interface MiddleColumnProps {
 export class MiddleColumn extends React.PureComponent<MiddleColumnProps> {
 
     public render() {
-        return <div className="row">
-            <div className="col-12 col-sm-3 col-xl-2"></div>
+        return <div className="row w-100">
+            <div className="col-0 col-sm-1 col-md-1 col-xl-2"></div>
             <div className="col">
                 {this.props.children}
             </div>
-            <div className="col-12 col-sm-3 col-xl-2"></div>
+            <div className="col-0 col-sm-1 col-md-1 col-xl-2"></div>
         </div>;
     }
 }
