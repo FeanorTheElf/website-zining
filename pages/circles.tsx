@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { PageDivided } from '../components/page_divided';
 import pagelist from '../pagelist';
-import { MiddleColumn } from '../components/spacing';
-import { PageFull } from '../components/page_full';
+import { Spacer } from '../components/spacing';
 
 interface CirclesProps {
     videos: string[]
@@ -47,7 +46,8 @@ export default class CirclePage extends React.PureComponent<{}> {
     public render() {
         return <PageDivided title="Zining Ren" dark={false} links={pagelist}>
             <Circles videos={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(i => ("./circle/video" + i + ".mp4"))}/>
-            <video id="video_display" className="video-full" loop controls style={{ width: 440, marginLeft: "calc(50% - 220px)" }}>
+            <Spacer/>
+            <video id="video_display" loop controls style={{ width: 440, marginLeft: "calc(50% - 220px)" }}>
                 <source src="./video_circles.mp4" type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>

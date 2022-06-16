@@ -24,7 +24,7 @@ Module.expectedDataFileDownloads++;
       Module['locateFile'] = Module['locateFilePackage'];
       err('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
     }
-    var REMOTE_PACKAGE_NAME = Module['locateFile'] ? Module['locateFile'](REMOTE_PACKAGE_BASE, '') : REMOTE_PACKAGE_BASE;
+    var REMOTE_PACKAGE_NAME = 'https://d197196ojfj0sb.cloudfront.net/WaterWeb.data';
   
     var REMOTE_PACKAGE_SIZE = metadata.remote_package_size;
     var PACKAGE_UUID = metadata.package_uuid;

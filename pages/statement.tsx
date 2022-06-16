@@ -3,7 +3,7 @@ import { PageFull } from '../components/page_full';
 import { MiddleColumn, Spacer } from '../components/spacing';
 import pagelist from '../pagelist';
 
-const Concert: NextPage = () => {
+const Statement: NextPage = () => {
     return <PageFull title="Zining Ren" dark={true} links={pagelist}>
         <MiddleColumn>
             <h1 className="p-4">ARTIST STATEMENT</h1>
@@ -23,4 +23,4 @@ const Concert: NextPage = () => {
     </PageFull>;
 }
 
-export default Concert
+export default Statement;
