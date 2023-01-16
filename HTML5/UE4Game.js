@@ -20884,6 +20884,7 @@ Module["callMain"] = function callMain(args) {
  }
  HEAP32[(argv >> 2) + argc] = 0;
  try {
+    _emscripten_sample_gamepad_data();
   var ret = Module["_main"](argc, argv, 0);
   exit(ret, true);
  } catch (e) {
