@@ -1167,9 +1167,10 @@ $(document).ready(function() {
 			});
 */
 // Instead as a fallback, download as ArrayBuffer. (TODO: Figure out the bugs with the above, and switch to using that one instead)
-			fetchOrDownloadAndStore(db, 'https://d197196ojfj0sb.cloudfront.net/WaterWeb.data', 'arraybuffer').then(function(dataArrayBuffer) {
+			base_url = 'https://d197196ojfj0sb.cloudfront.net/'
+			fetchOrDownloadAndStore(db, base_url + 'WaterWeb.data', 'arraybuffer').then(function(dataArrayBuffer) {
 				Module['preloadedPackages'] = {};
-				Module['preloadedPackages']['https://d197196ojfj0sb.cloudfront.net/WaterWeb.data'] = dataArrayBuffer;
+				Module['preloadedPackages'][base_url + 'WaterWeb.data'] = dataArrayBuffer;
 				return dataJsDownload.then(addScriptToDom);
 			});
 
