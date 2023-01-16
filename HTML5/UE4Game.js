@@ -10892,6 +10892,7 @@ function __fillGamepadEventData(eventStruct, e) {
 }
 
 function _emscripten_get_gamepad_status(index, gamepadState) {
+    return 0;
  if (!JSEvents.lastGamepadState) throw "emscripten_get_gamepad_status() can only be called after having first called emscripten_sample_gamepad_data() and that function has returned EMSCRIPTEN_RESULT_SUCCESS!";
  if (index < 0 || index >= JSEvents.lastGamepadState.length) return -5;
  if (!JSEvents.lastGamepadState[index]) return -7;
@@ -10904,6 +10905,7 @@ function _emscripten_get_heap_size() {
 }
 
 function _emscripten_get_num_gamepads() {
+    return 0;
  if (!JSEvents.lastGamepadState) throw "emscripten_get_num_gamepads() can only be called after having first called emscripten_sample_gamepad_data() and that function has returned EMSCRIPTEN_RESULT_SUCCESS!";
  return JSEvents.lastGamepadState.length;
 }
